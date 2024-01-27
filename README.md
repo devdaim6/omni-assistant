@@ -129,7 +129,7 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
 
 ## Technologies Used:
 
--**Next.js 14 :** Next.js is a React framework that enables the creation of fast and scalable web applications. It simplifies the development process and provides features such as server-side rendering, static site generation, and automatic code splitting.
+- **Next.js 14 :** Next.js is a React framework that enables the creation of fast and scalable web applications. It simplifies the development process and provides features such as server-side rendering, static site generation, and automatic code splitting.
 
 - **Redis :** Redis is an in-memory data structure store that can be used as a database, cache, and message broker. It's known for its speed and versatility. In your project, it can serve as both a database and a caching mechanism, providing efficient data storage and retrieval.
 

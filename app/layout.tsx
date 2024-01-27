@@ -1,10 +1,9 @@
 import "./globals.css";
-
+import { NextProvider } from "./Providers";
 export type Metadata = {
   title: string;
   description: string;
-  url: string; 
-  
+  url: string;
 };
 
 export const metadata: Metadata = {
@@ -21,7 +20,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <NextProvider>{children}</NextProvider>{" "}
+      </body>
     </html>
   );
 }

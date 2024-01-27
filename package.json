@@ -1,6 +1,6 @@
 {
   "name": "omni-assistant",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.2.9",
     "framer-motion": "^11.0.3",
     "ioredis": "^5.3.2",
     "next": "14.1.0",
