@@ -1,6 +1,6 @@
 # OmniAssistant : Your All-in-One AI Assistant
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 **Table of Contents:**
@@ -23,6 +23,7 @@
 6. [Code of Conduct](#code-of-conduct)
 7. [License](#license)
 8. [Changelog](#changelog)
+8. [Contributors ✨](#contributors-✨)
 
 ## Introduction
 
@@ -163,8 +164,18 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><img src="?s=80" width="80px;" alt="Daim Zahoor"/><br /><sub><b>Daim Zahoor</b></sub><br /><a href="https://omni-assistant.vercel.app/Daim Zahoor/omni-assistant/commits?author=" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><img src="?s=80" width="80px;" alt="Daim Zahoor"/><br /><sub><b>Daim Zahoor</b></sub><br /><a href="https://omni-assistant.vercel.app/Daim Zahoor/omni-assistant/commits?author=" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!

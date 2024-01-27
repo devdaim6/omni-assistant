@@ -9,15 +9,19 @@
   "imageSize": 80,
   "commit": true,
   "commitConvention": "none",
-  "contributors": [{
+  "contributors": [ {
     "name": "Daim Zahoor",
     "githubUsername": "devdaim6",
     "avatarUrl": "https://github.com/devdaim6.png",
     "contributions": [
-      "code",
-      "documentation",
-      "bug reports",
-      "feature reports"
+      "code"
+    ]
+  },{
+    "name": "Daim Zahoor",
+    "githubUsername": "DaimZahoorCSE",
+    "avatarUrl": "https://github.com/DaimZahoorCSE.png",
+    "contributions": [
+      "code"
     ]
   }],
   "contributorsPerLine": 7,
