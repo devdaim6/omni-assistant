@@ -1,0 +1,9 @@
+ name: bug
+  patterns:
+    - '**/*.js'
+- name: enhancement
+  patterns:
+    - '**/*.css'
+- name: documentation
+  patterns:
+    - '**/*.md'

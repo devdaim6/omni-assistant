@@ -9,8 +9,8 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-    - uses: actions/first-interaction@v1
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        issue-message: "Message that will be displayed on users' first issue"
-        pr-message: "Message that will be displayed on users' first pull request"
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: "Welcome to the OmniAssistant project! Congratulations on taking your first step towards contributing. We're excited to have you on board.Ready to tackle your first issue? Great choice! Explore our open issues, find one that interests you, and feel free to ask for help if needed. Remember, every contribution matters. Your efforts contribute to making OmniAssistant even better. Thank you for being a part of our growing community. Happy coding! Need guidance? Check out our CONTRIBUTING.md or reach out to our community. We're here to support you!"
+          pr-message: "Welcome to the OmniAssistant project! Were thrilled to have you here and appreciate your interest in contributing.Making your first pull request? Fantastic! Dont hesitate to ask questions, explore the codebase, and have fun along the way. Your contributions are valued, no matter how big or small.If you need assistance, check out our CONTRIBUTING.md guide or feel free to reach out to our community. Happy coding, and thanks for being a part of OmniAssistant!"

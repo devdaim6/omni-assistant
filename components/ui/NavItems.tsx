@@ -25,12 +25,16 @@ export const NavItems = ({
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    let direction = current - scrollYProgress.getPrevious();
+    const previous = scrollYProgress?.getPrevious();
 
-    if (direction < 0) {
-      setVisible(true);
-    } else {
-      setVisible(false);
+    if (previous !== undefined) {
+      let direction = current - previous;
+
+      if (direction < 0) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
     }
   });
   return (
