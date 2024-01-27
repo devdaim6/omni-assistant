@@ -22,5 +22,15 @@ All notable changes to this project will be documented in this file.
 - **Version:** 0.1.1  
  
 
+### Added
+
+- Vercel Deployment Button in README.md
+
+### Updated
+
+- **Date:** 2024-01-27
+- **Version:** 0.1.2  
+ 
+
 
 
