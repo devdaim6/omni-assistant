@@ -51,3 +51,14 @@ When making commits, please use one of the following prefixes in your commit mes
 
 - **Date:** 2024-01-27
 - **Version:** 0.1.2
+
+## [0.1.3] - 2024-01-27
+
+### Added
+
+- `feat:` Add Navbar and Home Component  
+
+### Updated
+
+- **Date:** 2024-01-27
+- **Version:** 0.1.2
