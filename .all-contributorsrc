@@ -1,0 +1,25 @@
+{
+  "projectName": "omni-assistant",
+  "projectOwner": "Daim Zahoor",
+  "repoType": "github",
+  "repoHost": "https://omni-assistant.vercel.app",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 80,
+  "commit": true,
+  "commitConvention": "none",
+  "contributors": [{
+    "name": "Daim Zahoor",
+    "githubUsername": "devdaim6",
+    "avatarUrl": "https://github.com/devdaim6.png",
+    "contributions": [
+      "code",
+      "documentation",
+      "bug reports",
+      "feature reports"
+    ]
+  }],
+  "contributorsPerLine": 7,
+  "linkToUsage": false
+}
