@@ -30,7 +30,7 @@
 
 ## Introduction
 
-GEMINI CHATS is an innovative web application that combines the power of the GEMINI PRO and GEMINI PRO VISION models, providing users with a versatile and immersive experience. It offers features for communication, recipe generation, image recognition, and now includes the PDF Talker for discussing PDF content.
+OmniAssistant is an innovative web application that combines the power of the GEMINI PRO and GEMINI PRO VISION models, providing users with a versatile and immersive experience. It offers features for communication, recipe generation, image recognition, and now includes the PDF Talker for discussing PDF content.
 
 ## Installation
 
