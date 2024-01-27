@@ -30,7 +30,7 @@ GEMINI CHATS is an innovative web application that combines the power of the GEM
 ### 1. Clone the Repository:
 
 ```bash
-git clone https://github.com/your-username/omni-assistant.git
+git clone https://github.com/devdaim6/omni-assistant.git
 ```
 
 ### 2. Navigate to the Project Folder
