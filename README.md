@@ -1,10 +1,10 @@
 # OmniAssistant : Your All-in-One AI Assistant
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+## Deploy to Vercel With Just One Click
+
+[![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/devdaim6/omni-assistant)
 
 **Table of Contents:**
 
@@ -26,7 +26,7 @@
 6. [Code of Conduct](#code-of-conduct)
 7. [License](#license)
 8. [Changelog](#changelog)
-9. [Contributors ✨](#contributors-✨)
+9. [Contributors](#contributors)
 
 ## Introduction
 
@@ -162,11 +162,8 @@ See [CHANGE_LOG.md](https://github.com/devdaim6/omni-assistant/blob/main/CHANGE_
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+We appreciate the valuable contributions from the following individuals:
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
@@ -179,10 +176,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tbody>
 </table>
 
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+Thank you to all our contributors for making this project better!
