@@ -24,6 +24,14 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Added
 
+- `chore:` Labeler configuration in .github/labeler.yml
+
+### Fixed
+
+- Resolve type error in NavItems component
+
+### Added
+
 - `feat:` NextUI provider in app/Providers.tsx
 
 ### Changed
@@ -46,6 +54,17 @@ When making commits, please use one of the following prefixes in your commit mes
 ### Added
 
 - `feat:` Vercel Deployment Button in README.md
+
+### Updated
+
+- **Date:** 2024-01-27
+- **Version:** 0.1.2
+
+## [0.1.3] - 2024-01-27
+
+### Added
+
+- `feat:` Add Navbar and Home Component
 
 ### Updated
 
