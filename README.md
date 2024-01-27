@@ -139,11 +139,11 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/devdaim6/onmi-assistant/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Code of Conduct
 
-See [CODE_OF_CONDUCT.md](https://github.com/devdaim6/onmi-assistant/blob/main/CODE_OF_CONDUCT.md) for details on our code of conduct.
+See [CODE_OF_CONDUCT.md](https://github.com/devdaim6/omni-assistant/blob/main/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
 ## License
 
@@ -151,4 +151,4 @@ This project is licensed under the [MIT License](https://opensource.org/license/
 
 ## Changelog
 
-See [CHANGE_LOG.md](https://github.com/devdaim6/onmi-assistant/blob/main/CHANGE_LOG.md) for details on what has changed.
+See [CHANGE_LOG.md](https://github.com/devdaim6/omni-assistant/blob/main/CHANGE_LOG.md) for details on what has changed.

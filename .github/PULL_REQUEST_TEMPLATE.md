@@ -15,7 +15,7 @@ Please include a summary of the change and which issue is fixed or which feature
 
 ## Checklist
 
-- [ ] I have read the [CONTRIBUTING](https://github.com/devdaim6/onmi-assistant/blob/main/CONTRIBUTING.md) document.
+- [ ] I have read the [CONTRIBUTING](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) document.
 - [ ] My code follows the code style of this project.
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.

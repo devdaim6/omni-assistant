@@ -16,7 +16,7 @@ We value your ideas and suggestions for new features or improvements. Use the fe
 
 ### Code Contributions
 
-If you have experience with React and Next.js, consider contributing code to OmniAssistant. Before submitting a pull request, make sure to follow the guidelines outlined in the [CONTRIBUTING.md](https://github.com/devdaim6/onmi-assistant/blob/main/CONTRIBUTING.md) file. Create a branch, make your changes, and submit a well-documented pull request.
+If you have experience with React and Next.js, consider contributing code to OmniAssistant. Before submitting a pull request, make sure to follow the guidelines outlined in the [CONTRIBUTING.md](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) file. Create a branch, make your changes, and submit a well-documented pull request.
 
 ### Documentation
 
@@ -28,11 +28,11 @@ Actively participate in the project's community by answering questions, providin
 
 ## Code of Conduct
 
-Please review our [Code of Conduct](https://github.com/devdaim6/onmi-assistant/blob/main/CODE_OF_CONDUCT.md) before participating in the OmniAssistant community. We expect all contributors to adhere to these guidelines to ensure a positive and inclusive environment.
+Please review our [Code of Conduct](https://github.com/devdaim6/omni-assistant/blob/main/CODE_OF_CONDUCT.md) before participating in the OmniAssistant community. We expect all contributors to adhere to these guidelines to ensure a positive and inclusive environment.
 
 ## Getting Started
 
-Before you contribute, make sure you have read the [README.md](https://github.com/devdaim6/onmi-assistant/blob/main/README.md) file, which provides an overview of OmniAssistant, including key features, technologies used, and how to set up the development environment.
+Before you contribute, make sure you have read the [README.md](https://github.com/devdaim6/omni-assistant/blob/main/README.md) file, which provides an overview of OmniAssistant, including key features, technologies used, and how to set up the development environment.
 
 ## Submitting Contributions
 
