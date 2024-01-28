@@ -1,6 +1,7 @@
 import { Nav } from "@/components/Nav";
 import "./globals.css";
 import { NextProvider } from "./Providers";
+
 export type Metadata = {
   title: string;
   description: string;
@@ -25,7 +26,7 @@ export default function RootLayout({
         <NextProvider>
           <Nav />
           <section className="p-4 pt-16 ">{children}</section>
-        </NextProvider>{" "}
+        </NextProvider>
       </body>
     </html>
   );

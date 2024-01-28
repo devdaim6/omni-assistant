@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { NavItems } from "@/components/ui/NavItems";
 import { IconHome, IconMessage, IconUser } from "@tabler/icons-react";
 export function Nav() {
