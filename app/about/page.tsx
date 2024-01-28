@@ -78,7 +78,7 @@ const page: FC = () => {
             <h2 className="text-xl font-semibold mb-4">Contributing</h2>
             <p className="mb-4">
               Omni Assistant is an open-source project, and we welcome
-              contributions from the community. Whether you're reporting bugs,
+              contributions from the community. Whether you&apos;re reporting bugs,
               suggesting new features, or contributing code, your involvement is
               highly valued. Refer to our Contribution Guidelines for details on
               how to get started.
