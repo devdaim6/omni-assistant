@@ -1,5 +1,5 @@
 "use client";
-import { FC, lazy } from "react";
+import { FC } from "react";
 import Sparkles from "../ui/Sparkles";
 
 const Home: FC = () => {
