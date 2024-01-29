@@ -1,7 +1,6 @@
-"use client";
+"use client"
 import { FC } from "react";
 import Sparkles from "../ui/Sparkles";
-
 const Home: FC = () => {
   return (
     <div className="lg:min-h-[23rem] min-h-[18rem] max-h-full  w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">

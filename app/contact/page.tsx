@@ -9,7 +9,7 @@ const page: FC<pageProps> = ({}) => {
       <BgSparkles className="min-h-screen">
         <div className="max-w-2xl mx-auto p-4  rounded-md shadow-md z-10">
           <div className="mb-6">
-            <h2 className="text-3xl font-bold text-gray-200 dark:text-gray-700">
+            <h2 className="text-xl lg:text-3xl font-bold text-gray-200 dark:text-gray-700">
               Contact our Omni Assistant Team
             </h2>
             <p className="text-gray-500 dark:text-gray-400 pt-2 text-sm">
