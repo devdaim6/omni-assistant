@@ -1,5 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
+import { Tooltip } from "@nextui-org/react";
+import { IconGitFork } from "@tabler/icons-react";
 import {
   AnimatePresence,
   motion,
@@ -72,8 +74,16 @@ export const NavItems = ({
           <span>
             <Link href={"/login"}>Login</Link>
           </span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px  h-px"></span>
         </button>
+        <Tooltip content="Github Repository Link">
+          <button className="inline-flex  items-center justify-center  ">
+            <a href="https://github.com/devdaim6/omni-assistant">
+              <IconGitFork color="#6383a8" />{" "}
+            </a>
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent  h-px" />
+          </button>
+        </Tooltip>
       </motion.div>
     </AnimatePresence>
   );

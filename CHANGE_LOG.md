@@ -26,6 +26,10 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Added
 
+- `feat`: Github Link Button in `components/ui/NavItems.tsx`
+
+### Added
+
 - `feat`: Dockerfile for containerization
 - `feat`: About page in `app/about/page.tsx`
 - `feat`: New service component in `components/Home/Services.tsx`
