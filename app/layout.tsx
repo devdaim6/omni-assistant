@@ -1,7 +1,7 @@
 import { Nav } from "@/components/Nav";
 import "./globals.css";
 import { NextProvider } from "./Providers";
-
+import Footer from "@/components/Home/Footer";
 export type Metadata = {
   title: string;
   description: string;
@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className="bg-black">
         <NextProvider>
           <Nav />
-          <section className="p-4 pt-16 ">{children}</section>
+          <section className="p-4 pt-16 ">{children}</section> <Footer />
         </NextProvider>
       </body>
     </html>
