@@ -13,7 +13,7 @@ const page: FC<pageProps> = ({}) => {
               Contact our Omni Assistant Team
             </h2>
             <p className="text-gray-500 dark:text-gray-400 pt-2 text-sm">
-              Fill out the form below, and we'll get back to you as soon as
+              Fill out the form below, and we&apos;ll get back to you as soon as
               possible.
             </p>
           </div>
