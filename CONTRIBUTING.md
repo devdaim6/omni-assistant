@@ -28,7 +28,7 @@ Actively participate in the project's community by answering questions, providin
 
 ## Code of Conduct
 
-Please review our [Code of Conduct](https://github.com/devdaim6/omni-assistant/blob/main/CODE_OF_CONDUCT.md) before participating in the OmniAssistant community. We expect all contributors to adhere to these guidelines to ensure a positive and inclusive environment.
+Please review our [Code of Conduct](https://github.com/devdaim6/omni-assistant/blob/main/Code_Of_Conduct.md) before participating in the OmniAssistant community. We expect all contributors to adhere to these guidelines to ensure a positive and inclusive environment.
 
 ## Getting Started
 
