@@ -78,31 +78,37 @@ const authOptions: NextAuthOptions = {
     maxAge: 24 * 60 * 60,
   },
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
-      if (!account) return false;
+    async signIn({
+      user,
+      account,
+      profile,
+      email,
+      credentials,
+    }): Promise<string | boolean> {
+      {
+        if (!account) return false;
 
-      if (account.provider === "credentials") {
-        return true;
-      }
-      if (account.provider === "google" || account.provider === "github") {
-        if (!profile) return true;
+        if (account.provider === "google" || account.provider === "github") {
+          if (!profile) return true;
 
-        const existingUser = await prisma.user.findFirst({
-          where: { email: profile.email, provider: account.provider },
-        });
-
-        if (!existingUser) {
-          await prisma.user.create({
-            data: {
-              email: profile.email,
-              name: profile.name,
-              provider: account.provider,
-              image:
-                account.provider === "google"
-                  ? ((profile as any).picture as string)
-                  : ((profile as any).avatar_url as string),
-            },
+          const existingUser = await prisma.user.findFirst({
+            where: { email: profile.email, provider: account.provider },
           });
+
+          if (!existingUser) {
+            await prisma.user.create({
+              data: {
+                email: profile.email,
+                name: profile.name,
+                provider: account.provider,
+                image:
+                  account.provider === "google"
+                    ? ((profile as any).picture as string)
+                    : ((profile as any).avatar_url as string),
+              },
+            });
+          }
+          return true;
         }
         return true;
       }
