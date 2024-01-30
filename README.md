@@ -139,7 +139,7 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
 
   - **GraphQL :** GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. It allows for efficient and flexible data fetching, reducing over-fetching and under-fetching of data in your application.
 
-  - **Z :** Z is a validation library for JavaScript and TypeScript. It provides a simple and composable API for validating data in your application. Z is known for its declarative syntax and ease of integration with various frameworks.
+  - **Zod :** Zod is a validation library for JavaScript and TypeScript. It provides a simple and composable API for validating data in your application.Zod is known for its declarative syntax and ease of integration with various frameworks.
 
   - **NextAuth :** NextAuth is an authentication library for Next.js applications. It simplifies the implementation of authentication features such as social sign-ins, email/password, and more. It provides a seamless and secure authentication experience for your users.
 
