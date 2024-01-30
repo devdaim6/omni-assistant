@@ -8,8 +8,10 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "framer-motion";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
+import { UserDropdown } from "../Dropdown";
 
 export const NavItems = ({
   navItems,
@@ -24,6 +26,8 @@ export const NavItems = ({
 }) => {
   const { scrollYProgress } = useScroll();
 
+  const { data: session, status }: { data: any | null; status: string | null } =
+    useSession();
   const [visible, setVisible] = useState(true);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -70,12 +74,19 @@ export const NavItems = ({
             <span className="hidden sm:block text-sm">{navItem.name}</span>
           </Link>
         ))}
-        <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-          <span>
-            <Link href={"/api/auth/signin"}>Login</Link>
-          </span>
-          <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px  h-px"></span>
-        </button>
+        {status !== "authenticated" ? (
+          <>
+            <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+              <Link href={"/api/auth/signin"}>Login </Link>{" "}
+              <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent   h-px"></span>
+            </button>
+          </>
+        ) : (
+          <>
+            <UserDropdown token={session?.token} />
+            <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-red-500 to-transparent   h-px"></span>
+          </>
+        )}
         <Tooltip content="Github Repository Link">
           <button className="inline-flex  items-center justify-center  ">
             <a href="https://github.com/devdaim6/omni-assistant">
