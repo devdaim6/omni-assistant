@@ -33,7 +33,7 @@
 OmniAssistant is an innovative web application that combines the power of the GEMINI PRO and GEMINI PRO VISION models, providing users with a versatile and immersive experience. It offers features for communication, recipe generation, image recognition, and now includes the PDF Talker for discussing PDF content.
 
 <details>
- <summary><span style="font-weight: bold;">Installation</span></summary> 
+ <summary><span id="header">Installation</span></summary> 
 
 ### 1. Clone the Repository:
 
@@ -121,7 +121,7 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
   - Item identification: Recognize and list the items present in an image.
 
 <details>
- <summary><span style="font-weight: bold;">Technologies Used</span></summary>
+  <summary><span id="header">Technologies Used</span></summary>
 
   - **Next.js 14 :** Next.js is a React framework that enables the creation of fast and scalable web applications. It simplifies the development process and provides features such as server-side rendering, static site generation, and automatic code splitting.
 
@@ -176,3 +176,13 @@ We appreciate the valuable contributions from the following individuals:
 </table>
 
 Thank you to all our contributors for making this project better!
+
+
+
+<style>
+  summary::before {
+    content: '## ';
+    visibility: hidden;
+    display: block;
+  }
+</style>
