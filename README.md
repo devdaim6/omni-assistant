@@ -32,6 +32,7 @@
 
 OmniAssistant is an innovative web application that combines the power of the GEMINI PRO and GEMINI PRO VISION models, providing users with a versatile and immersive experience. It offers features for communication, recipe generation, image recognition, and now includes the PDF Talker for discussing PDF content.
 
+## Installation
 <details>
  <summary><span id="header">Installation</span></summary> 
 
@@ -94,8 +95,9 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 That's it! You've successfully set up and launched OmniAssistant on your local machine. If you encounter any issues during the installation process, refer to the [CONTRIBUTING.md](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) document or seek assistance in our community.
 </details>
 
+## Key Features
 <details>
- <summary><span id="header">Key Features:</span></summary> 
+ <summary><span id="header">Key Features</span></summary> 
 
 #### 1. ChatMeh
 
@@ -122,6 +124,7 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
   - Item identification: Recognize and list the items present in an image.
 </details>
 
+## Technologies Used
 <details>
   <summary><span id="header">Technologies Used</span></summary>
 
@@ -178,12 +181,3 @@ We appreciate the valuable contributions from the following individuals:
 </table>
 
 Thank you to all our contributors for making this project better!
-
-
-
-<style>
-  #header{
-font-weight:"bolder";
-   font-size:"1.5rem";
-  }
-</style>
