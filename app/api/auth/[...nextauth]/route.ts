@@ -21,8 +21,8 @@ const authOptions: NextAuthOptions = {
         const { email, password }: { email: string; password: string } =
           credentials || {};
 
-        const isUser = await prisma.user.findUnique({
-          where: { email: email },
+        const isUser = await prisma.user.findFirst({
+          where: { email: email, provider: "credentials" } as { email: string },
         });
 
         if (!isUser) return null;
@@ -85,7 +85,7 @@ const authOptions: NextAuthOptions = {
         return true;
       }
       if (account.provider === "google" || account.provider === "github") {
-        if (!profile) return false;
+        if (!profile) return true;
 
         const existingUser = await prisma.user.findFirst({
           where: { email: profile.email, provider: account.provider },
@@ -99,8 +99,8 @@ const authOptions: NextAuthOptions = {
               provider: account.provider,
               image:
                 account.provider === "google"
-                  ? profile.picture
-                  : profile.avatar_url,
+                  ? ((profile as any).picture as string)
+                  : ((profile as any).avatar_url as string),
             },
           });
         }
