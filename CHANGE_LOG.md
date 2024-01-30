@@ -26,6 +26,14 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Added
 
+- `feat`: New component: Dropdown (components/Dropdown.tsx)
+
+### Modified
+
+- `feat`: Enhanced Navbar with user profile dropdown and signout button (components/ui/NavItems.tsx)
+
+### Added
+
 - `feat`: Authentication using NextAuth, Prisma, and PostgreSQL
 - `feat`: Support for Google, GitHub, and simple credentials as authentication providers
 - `feat`: Authentication routes in `app/api/auth/[...nextauth]/route.ts`
@@ -81,7 +89,7 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Updated
 
-- **Date:** 2024-01-30
+- **Date:** 2024-01-31
 - **Version:** 0.2.0
 
 ## [0.1.3] - 2024-01-27
