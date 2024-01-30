@@ -94,7 +94,8 @@ The application will be accessible at [http://localhost:3000](http://localhost:3
 That's it! You've successfully set up and launched OmniAssistant on your local machine. If you encounter any issues during the installation process, refer to the [CONTRIBUTING.md](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) document or seek assistance in our community.
 </details>
 
-## Key Features:
+<details>
+ <summary><span id="header">Key Features:</span></summary> 
 
 #### 1. ChatMeh
 
@@ -119,6 +120,7 @@ That's it! You've successfully set up and launched OmniAssistant on your local m
 - Challenge your perception and analytical skills with a variety of image-related tasks:
   - Object counting: Determine the number of objects in a given image.
   - Item identification: Recognize and list the items present in an image.
+</details>
 
 <details>
   <summary><span id="header">Technologies Used</span></summary>
@@ -180,9 +182,8 @@ Thank you to all our contributors for making this project better!
 
 
 <style>
-  summary::before {
-    content: '## ';
-    visibility: hidden;
-    display: block;
+  #header{
+font-weight:"bolder";
+   font-size:"1.5rem";
   }
 </style>
