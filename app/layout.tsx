@@ -1,6 +1,7 @@
+import Footer from "@/components/Home/Footer";
 import { Nav } from "@/components/Nav";
+import { AuthProvider, NextProvider } from "./Providers";
 import "./globals.css";
-import { NextProvider } from "./Providers";
 
 export type Metadata = {
   title: string;
@@ -23,10 +24,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-black">
-        <NextProvider>
-          <Nav />
-          <section className="p-4 pt-16 ">{children}</section>
-        </NextProvider>
+        <AuthProvider>
+          <NextProvider>
+            <Nav />
+            <section className="p-4 pt-16 ">{children}</section> <Footer />
+          </NextProvider>
+        </AuthProvider>
       </body>
     </html>
   );

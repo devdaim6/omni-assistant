@@ -26,6 +26,33 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Added
 
+- `feat`: Authentication using NextAuth, Prisma, and PostgreSQL
+- `feat`: Support for Google, GitHub, and simple credentials as authentication providers
+- `feat`: Authentication routes in `app/api/auth/[...nextauth]/route.ts`
+- `feat`: Session Provider in `app/Providers.tsx` for Client session
+- `feat`: Prisma client (`lib/prisma.ts`) for database interactions
+- `feat`: Redis client (`lib/redis.ts`) for caching
+- `feat`: Database schema definition using Prisma (`prisma/schema.prisma`)
+
+### Modified
+
+- `refactor`: Updated layout
+
+### Added
+
+- `feat` : Contact page in `app/contact/page.tsx`
+
+### Modified
+
+- `fix` : Updated layout in `app/layout.tsx`
+- `fix` : Updated page in `app/page.tsx`
+
+### Removed
+
+- `refactor` : Removed Footer component from the page and moved it to layout
+
+### Added
+
 - `feat`: Github Link Button in `components/ui/NavItems.tsx`
 
 ### Added
@@ -54,7 +81,7 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Updated
 
-- **Date:** 2024-01-28
+- **Date:** 2024-01-30
 - **Version:** 0.2.0
 
 ## [0.1.3] - 2024-01-27
