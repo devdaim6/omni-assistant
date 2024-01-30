@@ -32,7 +32,8 @@
 
 OmniAssistant is an innovative web application that combines the power of the GEMINI PRO and GEMINI PRO VISION models, providing users with a versatile and immersive experience. It offers features for communication, recipe generation, image recognition, and now includes the PDF Talker for discussing PDF content.
 
-## Installation
+<details>
+  <summary>## Installation</summary>
 
 ### 1. Clone the Repository:
 
@@ -50,22 +51,14 @@ cd omni-assistant
 
 Choose one of the following package managers to install project dependencies.
 
-- Using Npm :
+- Using Npm , Yarn or Bun :
 
 ```bash
 npm install
-```
-
-- Using Bun :
-
-```bash
-bun install
-```
-
-- Using Yarn :
-
-```bash
+#or
 yarn install
+#or
+bun install
 ```
 
 - Using Bundler (if using Ruby on Rails):
@@ -78,22 +71,14 @@ bundle install
 
 Choose the appropriate command based on your package manager.
 
-- Using Npm :
+- Using Npm, Yarn or Bun:
 
 ```bash
 npm run dev
-```
-
-- Using Bun :
-
-```bash
-bun run dev
-```
-
-- Using Yarn :
-
-```bash
+#or
 yarn run dev
+#or
+bun run dev
 ```
 
 - Using Bundler (if using Ruby on Rails):
@@ -101,48 +86,62 @@ yarn run dev
 ```bash
 bundle exec rails server
 ```
+</details>
 
 ### 5. Access the Application
 
 The application will be accessible at [http://localhost:3000](http://localhost:3000). Open your web browser and navigate to this URL.
 
-That's it! You've successfully set up and launched OmniAssistant on your local machine. If you encounter any issues during the installation process, refer to the [CONTRIBUTING.md](#contributing) document or seek assistance in our community.
+That's it! You've successfully set up and launched OmniAssistant on your local machine. If you encounter any issues during the installation process, refer to the [CONTRIBUTING.md](https://github.com/devdaim6/omni-assistant/blob/main/CONTRIBUTING.md) document or seek assistance in our community.
 
 ## Key Features:
 
-#### 1.**ChatMeh:**
+#### 1. ChatMeh
 
 - Experience a conversational AI assistant that remembers previous interactions and generates responses based on context. This feature allows for natural and engaging conversations.
 
-#### 2.**Quick Chat:**
+#### 2. Quick Chat :
 
 - Engage in quick and efficient exchanges with the AI without the need for context storage. Ideal for swift responses to simple queries.
 
-#### 3.**PDF Talks:**
+#### 3. PDF Talks :
 
 - Upload PDF documents and engage in discussions about their content. Explore topics, share insights, and discuss anything related to the uploaded PDFs.
 
-#### 4.**Recipe Generator:**
+#### 4. Recipe Generator :
 
 - Unleash your inner chef with two recipe generation variants:
   - Text-based variant: Generate recipes using only text input, catering to specific dietary preferences and ingredients.
   - Image-based variant: Capture the essence of a food-related image and derive a recipe based on its visual content.
 
-#### 5.**Fun Zone:**
+#### 5. Fun Zone : 
 
 - Challenge your perception and analytical skills with a variety of image-related tasks:
   - Object counting: Determine the number of objects in a given image.
   - Item identification: Recognize and list the items present in an image.
 
-## Technologies Used:
+<details>
+  <summary>## Technologies Used</summary>
 
-- **Next.js 14 :** Next.js is a React framework that enables the creation of fast and scalable web applications. It simplifies the development process and provides features such as server-side rendering, static site generation, and automatic code splitting.
+  - **Next.js 14 :** Next.js is a React framework that enables the creation of fast and scalable web applications. It simplifies the development process and provides features such as server-side rendering, static site generation, and automatic code splitting.
 
-- **Redis :** Redis is an in-memory data structure store that can be used as a database, cache, and message broker. It's known for its speed and versatility. In your project, it can serve as both a database and a caching mechanism, providing efficient data storage and retrieval.
+  - **PostgreSQL :** PostgreSQL is a powerful, open-source relational database management system. It is known for its extensibility, reliability, and support for complex queries. In your project, PostgreSQL can be used as a robust database backend.
 
-- **Zustand :** Zustand is a lightweight state management library for React. It offers a simple and intuitive API for managing state in your application. Zustand is known for its minimalistic approach and ease of integration with React componentsZustand is a lightweight state management library for React. It offers a simple and intuitive API for managing state in your application. Zustand is known for its minimalistic approach and ease of integration with React components.
+  - **Redis :** Redis is an in-memory data structure store that can be used as a database, cache, and message broker. It's known for its speed and versatility. In your project, it can serve as both a database and a caching mechanism, providing efficient data storage and retrieval.
 
-- **Framer Motion :** Framer Motion is a React animation library that makes it easy to add smooth and interactive animations to your components. It provides a simple syntax for creating animations using React components and hooks. Framer Motion is particularly well-suited for UI animations, transitions, and gestures.
+  - **Prisma :** Prisma is an open-source database toolkit that includes an auto-generated query builder and an ORM. It simplifies database access and manipulation by providing a type-safe and intuitive API for your application.
+
+  - **Zustand :** Zustand is a lightweight state management library for React. It offers a simple and intuitive API for managing state in your application. Zustand is known for its minimalistic approach and ease of integration with React components.
+
+  - **Framer Motion :** Framer Motion is a React animation library that makes it easy to add smooth and interactive animations to your components. It provides a simple syntax for creating animations using React components and hooks. Framer Motion is particularly well-suited for UI animations, transitions, and gestures.
+
+  - **GraphQL :** GraphQL is a query language for APIs and a runtime for executing those queries with your existing data. It allows for efficient and flexible data fetching, reducing over-fetching and under-fetching of data in your application.
+
+  - **Z :** Z is a validation library for JavaScript and TypeScript. It provides a simple and composable API for validating data in your application. Z is known for its declarative syntax and ease of integration with various frameworks.
+
+  - **NextAuth :** NextAuth is an authentication library for Next.js applications. It simplifies the implementation of authentication features such as social sign-ins, email/password, and more. It provides a seamless and secure authentication experience for your users.
+
+</details>
 
 ## Contributing
 
