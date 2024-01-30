@@ -7,21 +7,24 @@ name: Mark stale issues and pull requests
 
 on:
   schedule:
-  - cron: '26 0 * * *'
+    - cron: "26 0 * * *"
 
 jobs:
   stale:
-
     runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
 
     steps:
-    - uses: actions/stale@v5
-      with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        stale-issue-message: 'Stale issue message'
-        stale-pr-message: 'Stale pull request message'
-        stale-issue-label: 'no-issue-activity'
-        stale-pr-label: 'no-pr-activity'
+      - uses: actions/stale@v5
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: >
+            This issue appears to be stale. If the issue is still relevant, please provide additional details or let us know.
+            Otherwise, we may close it in the near future.
+          stale-pr-message: >
+            This pull request appears to be stale. If the changes are still relevant, please address any review feedback and let us know.
+            Otherwise, we may close it in the near future.
+          stale-issue-label: "no-issue-activity"
+          stale-pr-label: "no-pr-activity"
