@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 import bcrypt from "bcryptjs";
-
+import randomstring from "randomstring";
 const authOptions: NextAuthOptions = {
   providers: [
     /* The `CredentialsProvider` is a provider for NextAuth that allows users to authenticate using
@@ -45,6 +45,7 @@ const authOptions: NextAuthOptions = {
       profile(profile) {
         return {
           id: profile.id.toString(),
+          username: profile.login,
           name: profile.name ?? profile.name,
           email: profile.email,
           image: profile.avatar_url,
@@ -67,6 +68,7 @@ const authOptions: NextAuthOptions = {
       profile(profile) {
         return {
           id: profile.sub,
+          username: profile.given_name,
           name: profile.name,
           email: profile.email,
           image: profile.picture,
@@ -94,12 +96,16 @@ const authOptions: NextAuthOptions = {
           const existingUser = await prisma.user.findFirst({
             where: { email: profile.email, provider: account.provider },
           });
-
           if (!existingUser) {
             await prisma.user.create({
               data: {
                 email: profile.email,
                 name: profile.name,
+                username:
+                  account.provider === "google"
+                    ? ((profile as any).given_name as string).toLowerCase() +
+                      randomstring.generate({ length: 3, charset: "numeric" })
+                    : ((profile as any).login as string),
                 provider: account.provider,
                 image:
                   account.provider === "google"

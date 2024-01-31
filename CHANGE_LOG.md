@@ -24,6 +24,10 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Modified
+
+- `fix`: Issue of Unique Username in Authentication routes in `app/api/auth/[...nextauth]/route.ts`
+
 ### Added
 
 - `feat`: New component: Dropdown (components/Dropdown.tsx)
