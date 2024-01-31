@@ -15,10 +15,10 @@ model User {
   name          String?
   email         String?
   username      String?        @unique
-  provider      String?
+  provider      String?        @default("credentials")
   password      String?
   image         String?
-  freeQuery     Int?           @default(5)
+  freeToken     Int?           @default(5)
   conversations Conversation[] @relation("users")
 }
 

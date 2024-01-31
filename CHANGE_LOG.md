@@ -24,6 +24,12 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Added
+
+- `feat`: Created a new registration route for user sign-up.
+- `refactor`: Updated prisma/schema.prisma to reflect changes related to user registration.
+##### This update enhances the user experience by providing free token access for those who are not logged in. Authenticated users enjoy the added benefit of unlimited tokens upon login.
+
 ### Fixed
 
 - `fix`: Resolve unique username issue in API auth route
