@@ -24,6 +24,15 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Fixed
+
+- `fix`: Resolve unique username issue in API auth route
+- `fix`: Update authentication route to fix the unique username problem
+
+### Added
+
+- `refactor`:Modify prisma/schema.prisma to reflect the necessary schema changes
+
 ### Added
 
 - `feat`: New component: Dropdown (components/Dropdown.tsx)
