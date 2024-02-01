@@ -12,6 +12,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useState } from "react";
 import { UserDropdown } from "../Dropdown";
+import { usePathname } from "next/navigation";
 
 export const NavItems = ({
   navItems,
@@ -24,6 +25,7 @@ export const NavItems = ({
   }[];
   className?: string;
 }) => {
+  const path = usePathname();
   const { scrollYProgress } = useScroll();
 
   const { data: session, status }: { data: any | null; status: string | null } =
@@ -76,10 +78,17 @@ export const NavItems = ({
         ))}
         {status !== "authenticated" ? (
           <>
-            <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
-              <Link href={"/api/auth/signin"}>Login </Link>{" "}
-              <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent   h-px"></span>
-            </button>
+            {path !== "/register" ? (
+              <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+                <Link href={"/register"}>Sign Up</Link>{" "}
+                <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent   h-px"></span>
+              </button>
+            ) : (
+              <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
+                <Link href={"/api/auth/signin"}>Login </Link>{" "}
+                <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-blue-500 to-transparent   h-px"></span>
+              </button>
+            )}
           </>
         ) : (
           <>
