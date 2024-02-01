@@ -2,6 +2,7 @@ import Footer from "@/components/Home/Footer";
 import { Nav } from "@/components/Nav";
 import { AuthProvider, NextProvider } from "./Providers";
 import "./globals.css";
+import { Toaster } from "sonner";
 
 export type Metadata = {
   title: string;
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body className="bg-black">
         <AuthProvider>
           <NextProvider>
+            <Toaster position="bottom-center" closeButton duration={2000} />
             <Nav />
             <section className="p-4 pt-16 ">{children}</section> <Footer />
           </NextProvider>

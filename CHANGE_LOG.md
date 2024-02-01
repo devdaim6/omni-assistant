@@ -24,6 +24,41 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Modified
+
+- `style`: Updated styles for Home Page at `/components/Home/Home`
+- `feat`: Added SignUp Button in `components/ui/NavItems.tsx`
+
+### Added
+
+- `feat`: Introduces a new registration form page (`app/register/page.tsx`)
+  - This addition enhances the user onboarding process with a seamless registration experience
+  - The new registration form page provides a dedicated route for user sign-up, laying the foundation for future user account management features.
+
+### Updated
+
+- `feat`: Created a new registration route for user sign-up.
+- `refactor`: Updated prisma/schema.prisma to reflect changes related to user registration.
+
+### Modified
+
+- `style`: Home Page at `/components/Home/Home`
+- `feat`: SignUp Button Added in `components/ui/NavItems.tsx`
+
+### Added
+
+- `feat`: Added a new registration form page (`app/register/page.tsx`)
+- Introduces a user registration form for a seamless registration experience
+- Enhances the user onboarding process by providing a dedicated registration route
+- This addition lays the foundation for expanding user account management features
+
+### Added
+
+- `feat`: Created a new registration route for user sign-up.
+- `refactor`: Updated prisma/schema.prisma to reflect changes related to user registration.
+
+##### This update enhances the user experience by providing free token access for those who are not logged in. Authenticated users enjoy the added benefit of unlimited tokens upon login.
+
 ### Fixed
 
 - `fix`: Resolve unique username issue in API auth route
@@ -98,7 +133,7 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Updated
 
-- **Date:** 2024-01-31
+- **Date:** 2024-02-01
 - **Version:** 0.2.0
 
 ## [0.1.3] - 2024-01-27
