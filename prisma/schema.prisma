@@ -17,8 +17,8 @@ model User {
   username      String?        @unique
   provider      String?        @default("credentials")
   password      String?
-  image         String?
-  freeToken     Int?           @default(5)
+  image         String?        @default("data:image/png;base64,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")
+  freeToken     Int?           @default(30)
   conversations Conversation[] @relation("users")
 }
 
@@ -36,4 +36,13 @@ model Message {
   conversation   Conversation @relation(fields: [conversationId], references: [id])
   conversationId String
   senderId       String
+}
+
+model Contact {
+  id        String   @id @unique @default(cuid())
+  name      String
+  email     String?
+  subject   String
+  message   String?
+  createdAt DateTime @default(now())
 }

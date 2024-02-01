@@ -1,9 +1,29 @@
 import { BgSparkles } from "@/components/ui/BgSparkles";
+import { prisma } from "@/lib/prisma";
+import { NextResponse } from "next/server";
 import { FC } from "react";
-
-interface pageProps {}
-
-const page: FC<pageProps> = ({}) => {
+const page: FC = () => {
+  const sendContact = async (form: FormData) => {
+    "use server";
+    let { name, email, message, subject } = Object.fromEntries(form);
+    if (!email || !message) {
+      console.log("Email and Message Are required");
+      return;
+    }
+    try {
+      await prisma.contact.create({
+        data: {
+          name: name.toString(),
+          email: email.toString(),
+          message: message.toString(),
+          subject: subject.toString(),
+        },
+      });
+      return NextResponse.rewrite("/contact");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <BgSparkles className="min-h-screen">
@@ -17,7 +37,7 @@ const page: FC<pageProps> = ({}) => {
               possible.
             </p>
           </div>
-          <form>
+          <form action={sendContact} id="form">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
                 <label
@@ -28,6 +48,7 @@ const page: FC<pageProps> = ({}) => {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   placeholder="Enter your name"
                   className="w-full p-2 border border-gray-300 bg-gray-600 rounded-md focus:outline-none     dark:text-gray-200"
@@ -38,10 +59,12 @@ const page: FC<pageProps> = ({}) => {
                   htmlFor="email"
                   className="text-sm font-medium text-gray-300 dark:text-gray-500"
                 >
-                  Email
+                  Email <span className="text-red-600">*</span>
                 </label>
                 <input
                   id="email"
+                  name="email"
+                  required
                   type="email"
                   placeholder="Enter your email"
                   className="w-full p-2 border border-gray-300 bg-gray-600 rounded-md focus:outline-none     dark:text-gray-200"
@@ -57,6 +80,7 @@ const page: FC<pageProps> = ({}) => {
               </label>
               <input
                 id="subject"
+                name="subject"
                 type="text"
                 placeholder="Enter the subject"
                 className="w-full p-2 border border-gray-300 bg-gray-600 rounded-md focus:outline-none     dark:text-gray-200"
@@ -67,10 +91,12 @@ const page: FC<pageProps> = ({}) => {
                 htmlFor="message"
                 className="text-sm font-medium text-gray-300 dark:text-gray-500"
               >
-                Message
+                Message <span className="text-red-600">*</span>
               </label>
               <textarea
                 id="message"
+                required
+                name="message"
                 rows={4}
                 placeholder="Enter your message"
                 className="w-full p-2 border border-gray-300 bg-gray-600 rounded-md focus:outline-none     dark:text-gray-200"

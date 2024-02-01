@@ -9,7 +9,7 @@ export async function POST(req: Request) {
     where: { OR: [{ email, provider: "credentials" }, { username }] },
   });
   const emailAlreadyExists = users.filter(
-    (user) => user?.email === email && user.provider === "credentials"
+    (user: any) => user?.email === email && user.provider === "credentials"
   );
 
   if (emailAlreadyExists.length > 0) {
@@ -21,7 +21,7 @@ export async function POST(req: Request) {
   }
 
   const usernameAlreadyExists = users.filter(
-    (user) => user?.username === username
+    (user: any) => user?.username === username
   );
 
   if (usernameAlreadyExists.length > 0) {
@@ -38,7 +38,6 @@ export async function POST(req: Request) {
         username,
         email,
         password: hashedPassword,
-        image,
       },
     });
   }
