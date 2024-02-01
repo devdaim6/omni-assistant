@@ -24,6 +24,11 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Modified
+
+- `style`: Home Page at `/components/Home/Home`
+- `feat`: SignUp Button Added in `components/ui/NavItems.tsx`
+
 ### Added
 
 - `feat`: Added a new registration form page (`app/register/page.tsx`)
