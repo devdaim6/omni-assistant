@@ -26,8 +26,16 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Added
 
+- `feat`: Added a new registration form page (`app/register/page.tsx`)
+- Introduces a user registration form for a seamless registration experience
+- Enhances the user onboarding process by providing a dedicated registration route
+- This addition lays the foundation for expanding user account management features
+
+### Added
+
 - `feat`: Created a new registration route for user sign-up.
 - `refactor`: Updated prisma/schema.prisma to reflect changes related to user registration.
+
 ##### This update enhances the user experience by providing free token access for those who are not logged in. Authenticated users enjoy the added benefit of unlimited tokens upon login.
 
 ### Fixed
@@ -104,7 +112,7 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Updated
 
-- **Date:** 2024-01-31
+- **Date:** 2024-02-01
 - **Version:** 0.2.0
 
 ## [0.1.3] - 2024-01-27
