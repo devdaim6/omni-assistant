@@ -26,6 +26,22 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Modified
 
+- `style`: Updated styles for Home Page at `/components/Home/Home`
+- `feat`: Added SignUp Button in `components/ui/NavItems.tsx`
+
+### Added
+
+- `feat`: Introduces a new registration form page (`app/register/page.tsx`)
+  - This addition enhances the user onboarding process with a seamless registration experience
+  - The new registration form page provides a dedicated route for user sign-up, laying the foundation for future user account management features.
+
+### Updated
+
+- `feat`: Created a new registration route for user sign-up.
+- `refactor`: Updated prisma/schema.prisma to reflect changes related to user registration.
+
+### Modified
+
 - `style`: Home Page at `/components/Home/Home`
 - `feat`: SignUp Button Added in `components/ui/NavItems.tsx`
 
