@@ -46,3 +46,11 @@ model Contact {
   message   String?
   createdAt DateTime @default(now())
 }
+
+model Secrets {
+  id           String   @id @unique @default(cuid())
+  secretAccess String?
+  apikey       String?
+  lastAccessed DateTime
+  createdAt    DateTime @default(now())
+}

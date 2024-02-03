@@ -1,7 +1,5 @@
-export const getBase64 = async (image: any) => {
-  const reader = new FileReader();
-  reader.readAsDataURL(image);
-  reader.onload = () => {
-    return reader.result as string;
-  };
+export const getSecret = async (secretAccess: string) => {
+  const res = await fetch(`/api/gemini-api/${secretAccess}`);
+  const response = await res.json();
+  return await response?.secret;
 };
