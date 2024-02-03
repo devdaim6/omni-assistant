@@ -29,7 +29,7 @@ export default function RootLayout({
           <NextProvider>
             <Toaster position="bottom-center" closeButton duration={2000} />
             <Nav />
-            <section className="p-4 pt-16 ">
+            <section className="p-4 pt-16 min-h-screen">
               <NextTopLoader
                 color="#2299DD"
                 initialPosition={0.08}
