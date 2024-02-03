@@ -1,11 +1,10 @@
 "use client";
 import { BgSparkles } from "@/components/ui/BgSparkles";
-import { getBase64 } from "@/utils/util";
 import { FC } from "react";
 import { toast } from "sonner";
 import Input from "./Form/Input";
 
-const RegisterForm: FC = ({}) => {
+const RegisterForm: FC = ({ }) => {
   const registerUser = async (e: any) => {
     e.preventDefault();
 
@@ -16,10 +15,9 @@ const RegisterForm: FC = ({}) => {
     if (!email || !password || !name || !username) {
       toast.error("All fields are mandatory");
     }
-    const base64 = await getBase64(image);
 
     try {
-      const registerPromise = () =>
+      const registerPromise = async () =>
         fetch("/api/auth/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -28,7 +26,7 @@ const RegisterForm: FC = ({}) => {
             email,
             username,
             password,
-            image: base64,
+            image,
           }),
         }).then((response) => response.json());
 
@@ -91,7 +89,6 @@ const RegisterForm: FC = ({}) => {
               type="file"
               placeholder="Upload Your Image"
             />
-
             <button
               type="submit"
               className="w-full py-2 mt-8 bg-black/80 text-white border-gray-900 border hover:text-gray-500  rounded-lg "
