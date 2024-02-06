@@ -1,9 +1,9 @@
 import {
-    Avatar,
-    Dropdown,
-    DropdownItem,
-    DropdownMenu,
-    DropdownTrigger
+  Avatar,
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger
 } from "@nextui-org/react";
 import { IconLogout2 } from "@tabler/icons-react";
 import Link from "next/link";
@@ -11,16 +11,16 @@ import { FC } from "react";
 
 interface DropdownProps {
   token:
-    | {
-        picture: string | undefined;
-        name: string;
-        email: string;
-        sub: string;
-        iat: number;
-        exp: number;
-        jti: string;
-      }
-    | undefined;
+  | {
+    picture: string | undefined;
+    name: string;
+    email: string;
+    sub: string;
+    iat: number;
+    exp: number;
+    jti: string;
+  }
+  | undefined;
 }
 
 export const UserDropdown: FC<DropdownProps> = ({ token }) => {

@@ -27,6 +27,7 @@ const FileInput: FC<FileProps> = ({ image, setImage }) => {
                     }) => (
                         <div className="upload__image-wrapper text-gray-500">
                             <button
+                            type='button'
                                 className='flex gap-4 text-white'
                                 style={isDragging ? { color: 'red' } : undefined}
                                 onClick={onImageUpload}

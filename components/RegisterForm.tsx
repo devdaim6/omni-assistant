@@ -1,15 +1,16 @@
 "use client";
 import { BgSparkles } from "@/components/ui/BgSparkles";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { toast } from "sonner";
 import Input from "./Form/Input";
+import FileInput from "./Form/FileInput";
 
 const RegisterForm: FC = ({ }) => {
+  const [image, setImage] = useState("")
   const registerUser = async (e: any) => {
     e.preventDefault();
-
     const form = new FormData(e.currentTarget);
-    const { name, email, username, password, image }: any =
+    const { name, email, username, password }: any =
       Object.fromEntries(form);
 
     if (!email || !password || !name || !username) {
@@ -83,12 +84,7 @@ const RegisterForm: FC = ({ }) => {
                 placeholder="Enter your Password"
               />
             </div>
-            <Input
-              name="image"
-              id="image"
-              type="file"
-              placeholder="Upload Your Image"
-            />
+            <FileInput image={image} setImage={setImage} />
             <button
               type="submit"
               className="w-full py-2 mt-8 bg-black/80 text-white border-gray-900 border hover:text-gray-500  rounded-lg "

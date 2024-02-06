@@ -4,7 +4,6 @@ import { prisma } from "@/lib/prisma";
 
 export async function POST(req: Request) {
   const { username, email, password, name, image } = await req.json();
-
   const users = await prisma.user.findMany({
     where: { OR: [{ email, provider: "credentials" }, { username }] },
   });
