@@ -18,7 +18,7 @@ export default withAuth(
     );
 
     if (isLoginPage) {
-      if (!isAuth) {
+      if (isAuth) {
         return NextResponse.redirect(new URL("/", req.url));
       }
 
