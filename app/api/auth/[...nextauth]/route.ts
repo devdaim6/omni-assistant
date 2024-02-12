@@ -1,9 +1,10 @@
 import { prisma } from "@/lib/prisma";
+import { logger } from "@/utils/Logger";
+import bcrypt from "bcryptjs";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import bcrypt from "bcryptjs";
 import randomstring from "randomstring";
 
 const authOptions: NextAuthOptions = {
@@ -31,11 +32,10 @@ const authOptions: NextAuthOptions = {
         if (!user.password) return null;
 
         const passwordMatches = await bcrypt.compare(password, user.password);
-        console.log(user);
         if (!passwordMatches) return null;
 
-        const { password:_, image, ...userWithoutPassword} = user;
-        return userWithoutPassword;
+        const { password: _, image, ...userWithoutPassword } = user;
+        return { ...userWithoutPassword };
       },
     }),
 

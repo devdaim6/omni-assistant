@@ -10,20 +10,17 @@ import Link from "next/link";
 import { FC } from "react";
 
 interface DropdownProps {
-  token:
+  user:
   | {
-    picture: string | undefined;
+    image: string | undefined;
     name: string;
     email: string;
-    sub: string;
-    iat: number;
-    exp: number;
-    jti: string;
+
   }
   | undefined;
 }
 
-export const UserDropdown: FC<DropdownProps> = ({ token }) => {
+export const UserDropdown: FC<DropdownProps> = ({ user }) => {
   return (
     <>
       {" "}
@@ -33,13 +30,13 @@ export const UserDropdown: FC<DropdownProps> = ({ token }) => {
             isBordered
             as="button"
             className="transition-transform"
-            src={token?.picture}
+            src={user?.image}
           />
         </DropdownTrigger>
         <DropdownMenu aria-label="Profile Actions" variant="flat">
           <DropdownItem key="profile" className="h-14 gap-2">
             <p className="font-semibold">Signed in as</p>
-            <p className="font-bold">{token?.name}</p>
+            <p className="font-bold">{user?.name}</p>
           </DropdownItem>
           <DropdownItem key="analytics">Analytics</DropdownItem>
           <DropdownItem key="logout" color="danger">

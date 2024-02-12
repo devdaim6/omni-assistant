@@ -26,6 +26,8 @@ model User {
 model Conversation {
   id           String               @id @unique @default(cuid())
   messages     Message[]
+  chatName     String 
+  link          String              @unique @default(cuid())
   createdAt    DateTime             @default(now())
   participants ConversationToUser[]
 }
