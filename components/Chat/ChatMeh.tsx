@@ -1,3 +1,4 @@
+"use client"
 import { cn } from '@/utils/cn';
 import { useMessageStore, useSidebarStore } from '@/utils/store';
 import { IconSend2 } from '@tabler/icons-react';

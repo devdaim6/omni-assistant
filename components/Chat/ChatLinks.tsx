@@ -1,3 +1,4 @@
+"use client"
 import { useSidebarStore } from '@/utils/store';
 import { IconMessage2 } from '@tabler/icons-react';
 import Link from 'next/link';
