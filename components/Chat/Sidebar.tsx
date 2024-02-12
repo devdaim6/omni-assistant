@@ -7,7 +7,13 @@ import { FC, useCallback, useEffect } from 'react'
 import Button from '../ui/Button'
 import ChatLinks from './ChatLinks'
 
-
+interface User {
+    sub?: string;
+    id?: string;
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+}
 
 const Sidebar: FC = ({ }) => {
     const { isSidebarOpen, toggleSidebar } = useSidebarStore();
@@ -17,15 +23,15 @@ const Sidebar: FC = ({ }) => {
     const addConversation = useConversationStore((state) => state.addConversation);
     const fetchConversations = useCallback(async () => {
         try {
-            if (session?.user?.sub) {
-                const { data } = await axios.get(`/api/chatmeh/conversations/${session.user.sub}`);
-
+            if ((session?.user as User)?.sub) {
+                const { data } = await axios.get(`/api/chatmeh/conversations/${(session?.user as User)?.sub}`);
                 console.log(data);
             }
         } catch (error) {
             console.error('Error fetching conversations:', error);
         }
-    }, [status])
+    }, [session?.user, status]);
+
 
 
 
