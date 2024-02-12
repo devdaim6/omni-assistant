@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/prisma";
+import { logger } from "@/utils/Logger";
+import bcrypt from "bcryptjs";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GithubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
-import bcrypt from "bcryptjs";
 import randomstring from "randomstring";
+
 const authOptions: NextAuthOptions = {
   providers: [
     /* The `CredentialsProvider` is a provider for NextAuth that allows users to authenticate using
@@ -21,19 +23,19 @@ const authOptions: NextAuthOptions = {
         const { email, password }: { email: string; password: string } =
           credentials || {};
 
-        const isUser = await prisma.user.findFirst({
-          where: { email: email, provider: "credentials" } as { email: string },
+        const user = await prisma.user.findFirst({
+          where: { email: email, provider: "credentials" },
         });
 
-        if (!isUser) return null;
+        if (!user) return null;
 
-        if (!isUser.password) return null;
+        if (!user.password) return null;
 
-        const passwordMatches = await bcrypt.compare(password, isUser.password);
-
+        const passwordMatches = await bcrypt.compare(password, user.password);
         if (!passwordMatches) return null;
 
-        return isUser;
+        const { password: _, image, ...userWithoutPassword } = user;
+        return { ...userWithoutPassword };
       },
     }),
 
@@ -77,7 +79,9 @@ const authOptions: NextAuthOptions = {
     }),
   ],
   session: {
+    strategy: "jwt",
     maxAge: 24 * 60 * 60,
+    updateAge: 24 * 60 * 60,
   },
   callbacks: {
     async signIn({
@@ -87,42 +91,44 @@ const authOptions: NextAuthOptions = {
       email,
       credentials,
     }): Promise<string | boolean> {
-      {
-        if (!account) return false;
+      if (!account) return false;
 
-        if (account.provider === "google" || account.provider === "github") {
-          if (!profile) return true;
+      if (account.provider === "google" || account.provider === "github") {
+        if (!profile) return false;
 
-          const existingUser = await prisma.user.findFirst({
-            where: { email: profile.email, provider: account.provider },
+        const existingUser = await prisma.user.findFirst({
+          where: { email: profile.email, provider: account.provider },
+        });
+        if (!existingUser) {
+          await prisma.user.create({
+            data: {
+              email: profile.email,
+              name: profile.name,
+              username:
+                account.provider === "google"
+                  ? ((profile as any).given_name as string).toLowerCase() +
+                    randomstring.generate({ length: 3, charset: "numeric" })
+                  : ((profile as any).login as string),
+              provider: account.provider,
+              image:
+                account.provider === "google"
+                  ? ((profile as any).picture as string)
+                  : ((profile as any).avatar_url as string),
+            },
           });
-          if (!existingUser) {
-            await prisma.user.create({
-              data: {
-                email: profile.email,
-                name: profile.name,
-                username:
-                  account.provider === "google"
-                    ? ((profile as any).given_name as string).toLowerCase() +
-                      randomstring.generate({ length: 3, charset: "numeric" })
-                    : ((profile as any).login as string),
-                provider: account.provider,
-                image:
-                  account.provider === "google"
-                    ? ((profile as any).picture as string)
-                    : ((profile as any).avatar_url as string),
-              },
-            });
-          }
-          return true;
         }
         return true;
       }
+      return true;
     },
-    async session({ session, token }) {
-      return { ...session, token };
+    async session({ session, token }: { session: any; token: any }) {
+      if (token) {
+        session.user = { ...session.user, ...token };
+      }
+      return session;
     },
   },
+  pages: { signIn: "/login" },
   secret: process.env.NEXTAUTH_SECRET,
 };
 

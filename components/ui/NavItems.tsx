@@ -92,7 +92,7 @@ export const NavItems = ({
           </>
         ) : (
           <>
-            <UserDropdown token={session?.token} />
+            <UserDropdown user={session?.user} />
             <span className="absolute inset-x-0 w-1/2 mx-auto -bottom-px bg-gradient-to-r from-transparent via-red-500 to-transparent   h-px"></span>
           </>
         )}

@@ -16,6 +16,7 @@
     "@tsparticles/engine": "^3.1.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.1.0",
+    "axios": "^1.6.7",
     "bcryptjs": "^2.4.3",
     "clsx": "^2.1.0",
     "dotenv": "^16.4.1",

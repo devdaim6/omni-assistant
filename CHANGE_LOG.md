@@ -24,6 +24,50 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ## [0.2.0] - 2024-01-28
 
+### Added
+
+- `feat`: Logger for debugging ease
+
+### Added
+
+- `feat`: Introduce Gemini API route (`app/api/gemini-api/[secretAccess]/route.ts`)
+  - Adds a new route to interact with the Gemini API using a secret access key.
+
+- `feat`: Create Recipe Generator page (`app/recipe-generator/page.tsx`)
+  - Introduces a new page for generating recipes, enhancing the application's functionality.
+
+- `feat`: Implement File Input component (`components/Form/FileInput.tsx`)
+  - Adds a new reusable component for handling file inputs in forms.
+
+- `feat`: Implement Text Area component (`components/Form/TextArea.tsx`)
+  - Adds a new reusable component for handling text areas in forms.
+
+- `feat`: Add Radio component (`components/Radio.tsx`)
+  - Introduces a new component for handling radio input elements in forms.
+
+- `feat`: Create Recipe Home component (`components/Recipe/Recipehome.tsx`)
+  - Adds a new component for displaying recipe details on the home page.
+
+- `feat`: Introduce Gemini client (`lib/geminiClient.ts`)
+  - Adds a client for interacting with the Gemini API.
+
+- `feat`: Implement recipe generation utility (`utils/generateRecipe.ts`)
+  - Adds a utility for generating recipes.
+
+### Removed
+
+- `delete`: Remove services utility (`utils/services.ts`)
+  - Removes the services utility, likely replaced or deprecated.
+
+### Updated
+
+- `style`: Home Page at `/components/Home/Home`
+  - Makes style updates to the home page for improved aesthetics.
+
+### Miscellaneous
+
+- Various files were created, modified, or deleted to accommodate the introduced features.
+
 ### Modified
 
 - `style`: Updated styles for Home Page at `/components/Home/Home`
@@ -133,7 +177,7 @@ When making commits, please use one of the following prefixes in your commit mes
 
 ### Updated
 
-- **Date:** 2024-02-01
+- **Date:** 2024-02-06
 - **Version:** 0.2.0
 
 ## [0.1.3] - 2024-01-27
